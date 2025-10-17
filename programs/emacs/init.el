@@ -69,9 +69,6 @@
 (add-hook 'haskell-mode-hook
           'interactive-haskell-mode)
 
-(setq haskell-process-wrapper-function
-        (lambda (args) (apply 'nix-shell-command (nix-current-sandbox) args)))
-
 ;; org-mode
 
 (setq org-return-follows-link t)

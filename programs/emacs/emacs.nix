@@ -8,7 +8,6 @@ in {
     gruber-darker-theme
     multiple-cursors
     haskell-mode
-    nix-sandbox
     lua-mode
     nix-mode
     direnv
