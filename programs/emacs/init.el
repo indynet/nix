@@ -70,7 +70,7 @@
           'interactive-haskell-mode)
 
 (setq haskell-process-wrapper-function
-      (lambda (xs) (apply 'nix-shell-command (nix-current-sandbox) xs)))
+        (lambda (args) (apply 'nix-shell-command (nix-current-sandbox) args)))
 
 ;; org-mode
 
