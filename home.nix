@@ -11,11 +11,9 @@ in {
   home.pointerCursor           = i ./home/cursor.nix;
 
   home.packages                = with pkgs; [
-    haskell.compiler.ghc912
     nerd-fonts.iosevka
     _1password-gui
     _1password-cli
-    cabal-install
     iosevka
     ripgrep
     spotify
