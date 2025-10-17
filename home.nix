@@ -19,7 +19,6 @@ in {
     iosevka
     ripgrep
     spotify
-    emacs
     slurp
     grim
     bash
@@ -47,6 +46,7 @@ in {
     wezterm  = i ./programs/wezterm/wezterm.nix;
     vesktop  = i ./programs/vesktop.nix;
     nixvim   = i ./programs/nixvim/nixvim.nix;
+    emacs    = i ./programs/emacs/emacs.nix;
     wofi     = i ./programs/wofi/wofi.nix;
     bash     = i ./programs/bash.nix;
     ssh      = i ./programs/ssh.nix;
