@@ -11,6 +11,7 @@ in {
     nix-sandbox
     lua-mode
     nix-mode
+    direnv
     magit
   ];
 }
