@@ -11,6 +11,8 @@
 (menu-bar-mode     -1)
 (tool-bar-mode     -1)
 
+(load-theme 'gruber-darker t nil)
+
 ;; enable ido??
 
 (require 'ido)
