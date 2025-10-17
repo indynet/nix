@@ -9,6 +9,6 @@
     let system = "x86_64-linux";
         pkgs   = import nixpkgs { inherit system; };
     in {
-      home = import ./home.nix;
+      home = x: import ./home.nix ({ inherit pkgs; } // x);
     };
 }
