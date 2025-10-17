@@ -76,3 +76,9 @@
 
 (setq org-return-follows-link t)
 (setq org-startup-indented t)
+
+;; direnv-mode
+
+(require 'direnv)
+
+(direnv-mode)
