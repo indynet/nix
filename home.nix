@@ -43,6 +43,7 @@ in {
     hyprlock = i ./programs/hyprlock.nix;
     wezterm  = i ./programs/wezterm/wezterm.nix;
     vesktop  = i ./programs/vesktop.nix;
+    direnv   = i ./programs/direnv.nix;
     nixvim   = i ./programs/nixvim/nixvim.nix;
     emacs    = i ./programs/emacs/emacs.nix;
     wofi     = i ./programs/wofi/wofi.nix;
