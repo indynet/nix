@@ -51,4 +51,16 @@ in {
     ssh      = i ./programs/ssh.nix;
     git      = i ./programs/git.nix;
   };
+
+  home.file."full-update.sh" = {
+    enable     = true;
+
+    executable = true;
+
+    text       = ''
+    #!/bin/sh
+    nix flake update --flake /etc/nixos
+    nixos-rebuild switch
+    '';
+  };
 }
