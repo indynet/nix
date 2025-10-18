@@ -12,5 +12,6 @@ in {
     nix-mode
     direnv
     magit
+    smex
   ];
 }
