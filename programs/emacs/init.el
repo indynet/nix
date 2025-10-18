@@ -13,7 +13,7 @@
 
 (load-theme 'gruber-darker t nil)
 
-(indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 ;; enable ido??
 
 (require 'ido)
