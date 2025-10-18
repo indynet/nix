@@ -10,6 +10,7 @@ in {
     haskell-mode
     lua-mode
     nix-mode
+    tuareg
     direnv
     magit
     smex
