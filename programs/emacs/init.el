@@ -79,4 +79,6 @@
 
 (require 'direnv)
 
+
+(setq direnv-always-show-summary nil)
 (direnv-mode)
