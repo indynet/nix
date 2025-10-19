@@ -20,6 +20,7 @@ in {
     slurp
     grim
     bash
+    vlc
   ];
 
   imports                      = [
