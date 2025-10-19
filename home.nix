@@ -14,6 +14,7 @@ in {
     nerd-fonts.iosevka
     _1password-gui
     _1password-cli
+    pavucontrol
     iosevka
     ripgrep
     spotify
