@@ -13,6 +13,7 @@ in {
     tuareg
     direnv
     magit
+    bongo
     smex
   ];
 }
