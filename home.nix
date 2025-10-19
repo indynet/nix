@@ -15,6 +15,7 @@ in {
     _1password-gui
     _1password-cli
     pavucontrol
+    alsa-utils
     iosevka
     ripgrep
     spotify
