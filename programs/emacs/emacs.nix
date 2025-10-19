@@ -12,6 +12,7 @@ in {
     nix-mode
     tuareg
     direnv
+    volume
     magit
     bongo
     smex
