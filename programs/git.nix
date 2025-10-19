@@ -1,10 +1,10 @@
 { pkgs, global, ... }:
 
 {
-  userEmail   = global.email;
-  userName    = global.name;
+  settings.userEmail   = global.email;
+  settings.userName    = global.name;
 
-  extraConfig = {
+  settings.extraConfig = {
     "gpg \"ssh\"" = {
     	program = "${pkgs.lib.getExe' pkgs._1password-gui "op-ssh-sign"}";
     };
