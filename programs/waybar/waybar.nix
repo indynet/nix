@@ -5,8 +5,13 @@ in {
   inherit style;
 
   settings = {
-    position = "bottom";
-    output   = [global.output.name];
+    mainBar = {
+      position = "bottom";
+
+      output   = [
+        global.output.name
+      ];
+    };
   };
 
   systemd  = {
