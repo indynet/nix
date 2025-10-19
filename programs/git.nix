@@ -1,24 +1,28 @@
 { pkgs, global, ... }:
 
 {
-  settings.userEmail   = global.email;
-  settings.userName    = global.name;
-
-  settings.extraConfig = {
-    "gpg \"ssh\"" = {
-    	program = "${pkgs.lib.getExe' pkgs._1password-gui "op-ssh-sign"}";
+  settings = {
+    user        = {
+      email = global.email;
+      name  = global.name;
     };
 
-    commit        = {
-      gpgsign = true;
-    };
+    extraConfig = {
+      "gpg \"ssh\"" = {
+    	  program = "${pkgs.lib.getExe' pkgs._1password-gui "op-ssh-sign"}";
+      };
 
-    user          = {
-      signingKey = global.key;
-    };
+      commit        = {
+        gpgsign = true;
+      };
 
-    gpg           = {
-      format = "ssh";
+      user          = {
+        signingKey = global.key;
+      };
+
+      gpg           = {
+        format = "ssh";
+      };
     };
   };
 }
