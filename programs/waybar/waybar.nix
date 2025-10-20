@@ -20,7 +20,7 @@ in {
       ];
 
       clock        = {
-        format-alt = "{:%Y-%m-%d}";
+        format = "{%a %b %d | %R}";
       };
     };
   };
