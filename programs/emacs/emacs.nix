@@ -13,6 +13,7 @@ in {
     tuareg
     direnv
     volume
+    telega
     magit
     bongo
     smex
