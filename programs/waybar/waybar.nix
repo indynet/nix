@@ -6,7 +6,7 @@ in {
 
   settings = {
     mainBar = {
-      modules-left = [
+      modules-center = [
         "clock"
       ];
 
