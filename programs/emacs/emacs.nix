@@ -7,17 +7,14 @@ in {
   extraPackages = epkgs: with epkgs; [
     rainbow-identifiers
     gruber-darker-theme
-    visual-fill-column
+    rainbow-delimiters
     multiple-cursors
     haskell-mode
     lua-mode
     nix-mode
     tuareg
     direnv
-    volume
-    telega
     magit
-    bongo
     smex
   ];
 }
