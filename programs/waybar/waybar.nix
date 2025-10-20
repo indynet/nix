@@ -6,11 +6,22 @@ in {
 
   settings = {
     mainBar = {
-      position = "bottom";
+      modules-left = [
+        "clock"
+      ];
 
-      output   = [
+      position     = "bottom";
+
+      height       = 30;
+      spacing      = 4;
+
+      output       = [
         global.output.name
       ];
+
+      clock        = {
+        format-alt = "{:%Y-%m-%d}";
+      };
     };
   };
 
