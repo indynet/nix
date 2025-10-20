@@ -20,7 +20,7 @@ in {
       ];
 
       clock        = {
-        format = "{:%a %b %d | %R}";
+        format = "{:%a %b %d %R}";
       };
     };
   };
