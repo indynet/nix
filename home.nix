@@ -12,6 +12,7 @@ in {
 
   home.packages                = with pkgs; [
     nerd-fonts.iosevka
+    telegram-desktop
     _1password-gui
     _1password-cli
     pavucontrol
