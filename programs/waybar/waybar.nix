@@ -15,9 +15,7 @@ in {
       height       = 30;
       spacing      = 4;
 
-      output       = [
-        global.output.name
-      ];
+      output       = builtins.attrNames (global.output);
 
       clock        = {
         format = "{:%a %b %d %R}";
