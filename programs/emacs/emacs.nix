@@ -10,7 +10,7 @@ in {
     rainbow-delimiters
     multiple-cursors
     haskell-mode
-    idris2-mode
+    idris-mode
     lua-mode
     nix-mode
     tuareg
