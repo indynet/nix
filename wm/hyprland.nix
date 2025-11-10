@@ -55,7 +55,9 @@ with pkgs.lib;
 				gaps_in  	            = 0;
     };
 
-    env = "LIBVA_DRIVER_NAME,nvidia";
-    env = "__GLX_VENDOR_LIBRARY_NAME,nvidia";
+    env = [
+      "LIBVA_DRIVER_NAME,nvidia"
+      "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+    ];
   };
 }
