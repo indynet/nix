@@ -1,5 +1,6 @@
 { pkgs, global, ... }:
 
+with builtins;
 with pkgs.lib;
 
 {
@@ -13,13 +14,14 @@ with pkgs.lib;
 
     "$m"      = "SUPER";
 
-    monitorv2 = [
-      {
-        output = global.output.name;
-        mode   = global.output.mode;
-        vrr    = 1;
-      }
-    ];
+    monitorv2 =
+      let
+        monitors = map f (attrNames global.output);
+        f        = x: {
+          output = x;
+          mode   = global.output.${x}.mode;
+        };
+      in monitors;
 
     bindm     = [
     	"$m SHIFT, mouse:272, resizewindow"
