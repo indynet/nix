@@ -107,3 +107,7 @@
 
 (add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
+;; idris2
+
+(require 'idris2-mode)
