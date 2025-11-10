@@ -18,8 +18,12 @@ with pkgs.lib;
       let
         monitors = map f (attrNames global.output);
         f        = x: {
-          output = x;
-          mode   = global.output.${x}.mode;
+          output    = x;
+          mode      = global.output.${x}.mode;
+          position  = global.output.${x}.position;
+          scale     = global.output.${x}.scale;
+          vrr       = global.output.${x}.vrr;
+          transform = global.output.${x}.transform;
         };
       in monitors;
 
