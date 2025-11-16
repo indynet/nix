@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  package    = pkgs.ungoogled-chromium;
+  # package    = pkgs.ungoogled-chromium;
 
   extensions = [
 			{ id = "eimadpbcbfnmbkopoojfekhnkhdbieeh"; } # darkreader
