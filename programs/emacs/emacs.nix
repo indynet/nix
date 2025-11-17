@@ -12,6 +12,7 @@ in {
     haskell-mode
     lua-mode
     nix-mode
+    ligature
     tuareg
     direnv
     magit
