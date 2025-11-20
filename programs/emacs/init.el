@@ -130,3 +130,4 @@
 ;; envrc-mode
 
 (envrc-global-mode)
+(setq envrc-show-summary-in-minibuffer nil)
