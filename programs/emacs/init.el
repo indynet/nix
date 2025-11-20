@@ -75,13 +75,6 @@
 (setq org-return-follows-link t)
 (setq org-startup-indented t)
 
-;; direnv-mode
-
-(require 'direnv)
-
-(setq direnv-always-show-summary nil)
-(direnv-mode)
-
 ;; multiple-cursors
 
 (require 'multiple-cursors)
@@ -129,3 +122,7 @@
 
 (with-eval-after-load 'tramp
   (add-to-list 'tramp-remote-path 'tramp-own-remote-path))
+
+;; envrc-mode
+
+(add-hook 'after-init-hook 'envrc-global-mode)

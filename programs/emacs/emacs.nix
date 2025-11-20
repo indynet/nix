@@ -14,7 +14,7 @@ in {
     nix-mode
     ligature
     tuareg
-    direnv
+    envrc
     magit
     smex
   ];
