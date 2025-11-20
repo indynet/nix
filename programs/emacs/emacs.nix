@@ -10,6 +10,7 @@ in {
     rainbow-delimiters
     multiple-cursors
     haskell-mode
+    inheritenv
     lua-mode
     nix-mode
     ligature

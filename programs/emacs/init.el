@@ -123,6 +123,10 @@
 (with-eval-after-load 'tramp
   (add-to-list 'tramp-remote-path 'tramp-own-remote-path))
 
+;; inheritenv
+
+(require 'inheritenv)
+
 ;; envrc-mode
 
-(add-hook 'after-init-hook 'envrc-global-mode)
+(envrc-global-mode)
