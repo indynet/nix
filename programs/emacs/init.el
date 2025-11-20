@@ -124,3 +124,7 @@
                                      ":?" ":?>" "//" "///" "/*" "*/" "/=" "//=" "/==" "@_" "__" "???"
                                      "<:<" ";;;"))
 (global-ligature-mode t)
+
+;; tramp
+
+(setq tramp-default-remote-shell "/bin/bash")
