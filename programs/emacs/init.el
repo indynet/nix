@@ -127,4 +127,4 @@
 
 ;; tramp
 
-(setq tramp-default-remote-shell "/bin/bash")
+(add-to-list 'tramp-remote-path "~/.nix-profile/bin")
