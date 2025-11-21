@@ -11,6 +11,7 @@ in {
     multiple-cursors
     haskell-mode
     inheritenv
+    rust-mode
     lua-mode
     nix-mode
     ligature

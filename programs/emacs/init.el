@@ -43,6 +43,10 @@
 
 (keymap-global-set "C-." 'dotf)
 
+;; rust-mode
+
+(require 'rust-mode)
+
 ;; haskell-mode
 
 (require 'haskell-interactive-mode)
