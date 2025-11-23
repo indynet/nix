@@ -14,6 +14,11 @@
 (load-theme 'gruber-darker t nil)
 
 (setq-default indent-tabs-mode nil)
+
+;; compile-mode
+
+(setq compilation-scroll-output t)
+
 ;; enable ido??
 
 (require 'ido)
