@@ -143,12 +143,17 @@
 ;; org-recur
 
 (require 'org-recur)
-(define-key org-recur-mode-map (kbd "C-c d") 'org-recur-finish)
-(define-key org-recur-agenda-mode-map (kbd "d") 'org-recur-finish)
-(define-key org-recur-agenda-mode-map (kbd "C-c d") 'org-recur-finish)
 
-(setq org-recur-finish-done t
-      org-recur-finish-archive t)
+(add-hook 'org-mode-hook #'org-recur-mode)
+(add-hook 'org-agenda-mode-hook #'org-recur-agenda-mode)
+
+(with-eval-after-load 'org-recur
+  (define-key org-recur-mode-map (kbd "C-c d") 'org-recur-finish)
+  (define-key org-recur-agenda-mode-map (kbd "d") 'org-recur-finish)
+  (define-key org-recur-agenda-mode-map (kbd "C-c d") 'org-recur-finish)
+
+  (setq org-recur-finish-done t
+        org-recur-finish-archive t))
 
 (defun org-agenda-refresh ()
   "Refresh all `org-agenda' buffers."
