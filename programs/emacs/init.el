@@ -174,6 +174,9 @@
 
 (require 'org-recur)
 
+(with-eval-after-load 'org
+  (org-recur-mode))
+
 (define-key org-recur-mode-map (kbd "C-c d") 'org-recur-finish)
 (define-key org-recur-agenda-mode-map (kbd "d") 'org-recur-finish)
 (define-key org-recur-agenda-mode-map (kbd "C-c d") 'org-recur-finish)
@@ -194,8 +197,6 @@
 
 (setq org-log-done (quote time))
 (setq org-read-date-prefer-future 'time)
-
-(org-recur-mode)
 
 ;; inheritenv
 
