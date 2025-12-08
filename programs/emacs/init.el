@@ -142,7 +142,7 @@
 ;; org-habit
 
 (with-eval-after-load 'org
-  (add-to-list 'org-modules 'habit))
+  (add-to-list 'org-modules 'org-habit t))
 
 ;; inheritenv
 
