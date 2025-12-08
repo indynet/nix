@@ -18,6 +18,12 @@
 
 (setq-default indent-tabs-mode nil)
 
+;; util
+
+(defun wkdy (date)
+  "Return t if DATE is a weekday."
+  (memq (calendar-day-of-week date) '(1 2 3 4 5)))
+
 ;; compile-mode
 
 (setq compilation-scroll-output t)
@@ -139,12 +145,6 @@
 
 (with-eval-after-load 'org
   (add-to-list 'org-modules 'habit))
-
-;; org-custom
-
-(defun oc/wkdy (date)
-  "Return if date is a weekday."
-  (memq (calendar-day-of-week date) '(1 2 3 4 5)))
 
 ;; org-recur
 
