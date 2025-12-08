@@ -100,9 +100,10 @@
 
 (defun transition-done (n-done n-not-done)
   "Transition to DONE if statistics is complete"
-  (org-todo (if (= n-not-done 0) "DONE" "TODO")))
+  (let (org-log-done org-todo-log-states)
+    (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
 
-(add-hook 'org-after-todo-state-change-hook 'reset-checkboxes)
+; (add-hook 'org-after-todo-state-change-hook 'reset-checkboxes)
 (add-hook 'org-after-todo-statistics-hook 'transition-done)
 
 (setq org-return-follows-link t)
