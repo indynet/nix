@@ -141,10 +141,9 @@
 (with-eval-after-load 'tramp
   (add-to-list 'tramp-remote-path 'tramp-own-remote-path))
 
-;; org-habit
+;; org-superstar
 
-(with-eval-after-load 'org
-  (add-to-list 'org-modules 'habit))
+(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
 
 ;; org-recur
 
