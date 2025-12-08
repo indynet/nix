@@ -140,6 +140,12 @@
 (with-eval-after-load 'org
   (add-to-list 'org-modules 'habit))
 
+;; org-custom
+
+(defun oc/wkdy (date)
+  "Return if date is a weekday."
+  (memq (calendar-day-of-week date) '(1 2 3 4 5)))
+
 ;; org-recur
 
 (require 'org-recur)
