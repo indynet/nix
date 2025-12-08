@@ -90,6 +90,11 @@
 
 ;; org-mode
 
+(defun all-checked ()
+    (cl-every #'identity
+              (org-element-map (org-element-parse-buffer) 'item
+                (lambda (item) (eq (org-element-property :checkbox item) 'on)))))
+
 (defun reset-checkboxes ()
   "Reset all checkboxes if DONE."
   (when (string= org-state "DONE")
@@ -103,7 +108,7 @@
   (let (org-log-done org-todo-log-states)
     (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
 
-; (add-hook 'org-after-todo-state-change-hook 'reset-checkboxes)
+(add-hook 'org-after-todo-state-change-hook 'reset-checkboxes)
 (add-hook 'org-after-todo-statistics-hook 'transition-done)
 
 (setq org-return-follows-link t)
