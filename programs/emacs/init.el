@@ -174,8 +174,8 @@
 
 (require 'org-recur)
 
-(with-eval-after-load 'org
-  (org-recur-mode))
+(add-hook 'org-mode-hook #'org-recur-mode)
+(add-hook 'org-agenda-mode-hook #'org-recur-agenda-mode)
 
 (define-key org-recur-mode-map (kbd "C-c d") 'org-recur-finish)
 (define-key org-recur-agenda-mode-map (kbd "d") 'org-recur-finish)
