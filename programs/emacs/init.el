@@ -14,6 +14,8 @@
 (ido-mode 1)
 (ido-everywhere 1)
 
+(add-to-list 'org-modules 'habit)
+
 (load-theme 'gruber-darker t nil)
 
 (setq-default indent-tabs-mode nil)
@@ -129,6 +131,10 @@
                                      ":?" ":?>" "//" "///" "/*" "*/" "/=" "//=" "/==" "@_" "__" "???"
                                      "<:<" ";;;"))
 (global-ligature-mode t)
+
+;; org-superstar
+
+(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
 
 ;; tramp
 
