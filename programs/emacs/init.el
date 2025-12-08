@@ -93,6 +93,10 @@
 (setq org-return-follows-link t)
 (setq org-startup-indented t)
 
+(setq org-enforce-todo-checkbox-dependencies t)
+(setq org-checkbox-hierarchical-statistics t)
+(setq org-enforce-todo-dependencies t)
+
 ;; multiple-cursors
 
 (require 'multiple-cursors)
