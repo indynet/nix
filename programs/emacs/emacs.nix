@@ -9,10 +9,10 @@ in {
     gruber-darker-theme
     rainbow-delimiters
     multiple-cursors
-    org-superstar
     haskell-mode
     inheritenv
     rust-mode
+    org-recur
     lua-mode
     nix-mode
     ligature

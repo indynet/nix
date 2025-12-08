@@ -130,10 +130,6 @@
                                      "<:<" ";;;"))
 (global-ligature-mode t)
 
-;; org-superstar
-
-(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
-
 ;; tramp
 
 (with-eval-after-load 'tramp
@@ -143,6 +139,30 @@
 
 (with-eval-after-load 'org
   (add-to-list 'org-modules 'org-habit t))
+
+;; org-recur
+
+(require 'org-recur)
+(define-key org-recur-mode-map (kbd "C-c d") 'org-recur-finish)
+(define-key org-recur-agenda-mode-map (kbd "d") 'org-recur-finish)
+(define-key org-recur-agenda-mode-map (kbd "C-c d") 'org-recur-finish)
+
+(setq org-recur-finish-done t
+      org-recur-finish-archive t)
+
+(defun org-agenda-refresh ()
+  "Refresh all `org-agenda' buffers."
+  (dolist (buffer (buffer-list))
+    (with-current-buffer buffer
+      (when (derived-mode-p 'org-agenda-mode)
+        (org-agenda-maybe-redo)))))
+
+(defadvice org-schedule (after refresh-agenda activate)
+  "Refresh org-agenda."
+  (org-agenda-refresh))
+
+(setq org-log-done (quote time))
+(setq org-read-date-prefer-future 'time)
 
 ;; inheritenv
 
