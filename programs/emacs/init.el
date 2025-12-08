@@ -15,8 +15,6 @@
 
 (setq-default indent-tabs-mode nil)
 
-(add-to-list 'org-modules 'habit)
-
 ;; compile-mode
 
 (setq compilation-scroll-output t)
@@ -128,10 +126,6 @@
                                      ":?" ":?>" "//" "///" "/*" "*/" "/=" "//=" "/==" "@_" "__" "???"
                                      "<:<" ";;;"))
 (global-ligature-mode t)
-
-;; org-superstar
-
-(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
 
 ;; tramp
 
