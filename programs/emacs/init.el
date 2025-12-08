@@ -90,6 +90,16 @@
 
 ;; org-mode
 
+(defun reset-checkboxes ()
+  "Reset all checkboxes if DONE."
+  (when (string= org-state "DONE")
+    (org-map-entries
+     (lambda ()
+       (org-reset-checkbox-state-subtree))
+     nil 'tree)))
+
+(add-hook 'org-after-todo-state-change-hook 'reset-checkboxes)
+
 (setq org-return-follows-link t)
 (setq org-startup-indented t)
 
