@@ -14,8 +14,6 @@
 (ido-mode 1)
 (ido-everywhere 1)
 
-(add-to-list 'org-modules 'habit)
-
 (load-theme 'gruber-darker t nil)
 
 (setq-default indent-tabs-mode nil)
@@ -140,6 +138,11 @@
 
 (with-eval-after-load 'tramp
   (add-to-list 'tramp-remote-path 'tramp-own-remote-path))
+
+;; org-habit
+
+(with-eval-after-load 'org
+  (add-to-list 'org-modules 'habit))
 
 ;; inheritenv
 
