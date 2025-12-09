@@ -12,15 +12,12 @@ in {
     org-super-agenda
     org-superstar
     haskell-mode
-    org-contacts
-    org-caldav
     inheritenv
     rust-mode
     org-recur
     lua-mode
     nix-mode
     ligature
-    tuareg
     envrc
     magit
     smex
