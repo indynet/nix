@@ -118,6 +118,16 @@
 (setq org-checkbox-hierarchical-statistics t)
 (setq org-enforce-todo-dependencies t)
 
+(setq org-startup-folded 'fold)
+
+(add-hook 'org-mode-hook
+          (lambda ()
+            "checkbox prettify"
+            (push '("[ ]" . '☐') prettify-symbols-alist)
+            (push '("[X]" . '☑') prettify-symbols-alist)
+            (push '("[-]" . '❍') prettify-symbols-alist)
+            (prettify-symbols-mode)))
+
 ;; multiple-cursors
 
 (require 'multiple-cursors)
@@ -166,7 +176,7 @@
 (with-eval-after-load 'tramp
   (add-to-list 'tramp-remote-path 'tramp-own-remote-path))
 
-;; org-superstar
+;; org-supersntar
 
 (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
 
@@ -174,6 +184,30 @@
 
 (require 'org-super-agenda)
 (add-hook 'org-agenda-mode-hook 'org-super-agenda-mode)
+
+(setq org-todo-keywords
+        '((sequence "CHECK"               "|" "DONE")
+          (sequence "CALL"                "|" "DONE")
+          (sequence "TODO" "WAITING"      "|" "DONE")
+          (sequence "PLAN"                "|" "DONE" "CANCELLED")
+          (sequence "APPOINTMENT" "VISIT" "|" "DONE" "CANCELLED")))
+
+(setq org-super-agenda-groups
+      '((:order-multi (1 (:name "Appointments"
+                                :time-grid t
+                                :todo "VISIT")
+                         (:name "Upcoming Appointments"
+                                :time-grid t
+                                :todo "APPOINTMENT")))
+        (:name "Important"
+               :tag "important"
+               :priority "A")
+        (:name "Personal"
+               :tag "personal"
+               :priority "B")
+        (:name "Chores"
+               :tag "chore"
+               :priority "C")))
 
 ;; org-recur
 
