@@ -90,11 +90,6 @@
 
 ;; org-mode
 
-(defun all-checked ()
-    (cl-every #'identity
-              (org-element-map (org-element-parse-buffer) 'item
-                (lambda (item) (eq (org-element-property :checkbox item) 'on)))))
-
 (defun reset-checkboxes ()
   "Reset all checkboxes if DONE."
   (when (string= org-state "DONE")
@@ -106,7 +101,11 @@
 (defun transition-done (n-done n-not-done)
   "Transition to DONE if statistics is complete"
   (let (org-log-done org-todo-log-states)
-    (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
+    (org-todo (if (= n-not-done 0) "DONE" "TODO")))
+  (org-map-entries
+   (lambda ()
+     (org-todo "TODO"))
+     nil 'tree))
 
 (add-hook 'org-after-todo-state-change-hook 'reset-checkboxes)
 (add-hook 'org-after-todo-statistics-hook 'transition-done)
