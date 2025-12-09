@@ -12,6 +12,8 @@ in {
     org-super-agenda
     org-superstar
     haskell-mode
+    org-contacts
+    org-caldav
     inheritenv
     rust-mode
     org-recur
