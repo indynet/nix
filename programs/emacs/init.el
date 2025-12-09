@@ -123,9 +123,9 @@
 (add-hook 'org-mode-hook
           (lambda ()
             "checkbox prettify"
-            (push '("[ ]" . '☐') prettify-symbols-alist)
-            (push '("[X]" . '☑') prettify-symbols-alist)
-            (push '("[-]" . '❍') prettify-symbols-alist)
+            (push '("[ ]" . "☐") prettify-symbols-alist)
+            (push '("[X]" . "☑") prettify-symbols-alist)
+            (push '("[-]" . "❍") prettify-symbols-alist)
             (prettify-symbols-mode)))
 
 ;; multiple-cursors
@@ -176,7 +176,7 @@
 (with-eval-after-load 'tramp
   (add-to-list 'tramp-remote-path 'tramp-own-remote-path))
 
-;; org-supersntar
+;; org-superstar
 
 (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
 
