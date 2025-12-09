@@ -185,14 +185,6 @@
 (require 'org-super-agenda)
 (add-hook 'org-agenda-mode-hook 'org-super-agenda-mode)
 
-(setq org-todo-keywords
-        '((sequence "CHECK"               "|" "DONE")
-          (sequence "CALL"                "|" "DONE")
-          (sequence "TODO"                "|" "DONE")
-          (sequence "TASK" "IN-PROGRESS"  "|" "DONE")
-          (sequence "PLAN"                "|" "DONE" "CANCELLED")
-          (sequence "APPOINTMENT" "VISIT" "|" "DONE" "CANCELLED")))
-
 (setq org-super-agenda-groups
       '((:order-multi (1 (:name "Appointments"
                                 :time-grid t
@@ -246,3 +238,55 @@
 
 (envrc-global-mode)
 (setq envrc-show-summary-in-minibuffer nil)
+
+;; major cms
+
+(setq org-todo-keywords
+        '((sequence "CHECK"               "|" "DONE")
+          (sequence "CALL"                "|" "DONE")
+          (sequence "TODO"                "|" "DONE")
+          (sequence "TASK" "IN-PROGRESS"  "|" "DONE")
+          (sequence "PLAN"                "|" "DONE" "CANCELLED")
+          (sequence "APPOINTMENT" "VISIT" "|" "DONE" "CANCELLED")))
+
+(setq org-todo-keyword-faces
+      '(("APPOINTMENT" .
+         (:foreground "cyan"
+                      :weight bold
+                      :underline nil))
+        ("CANCELLED" .
+         (:foreground "maroon"
+                      :weight bold
+                      :underline t))
+        ("IN-PROGRESS" .
+         (:foreground "coral"
+                      :weight bold
+                      :underline nil))
+        ("VISIT" .
+         (:foreground "deep sky blue"
+                      :weight bold
+                      :underline nil))
+        ("PLAN" .
+         (:foreground "burlywood"
+                      :weight bold
+                      :underline nil))
+        ("TASK" .
+         (:foreground "chartreuse"
+                      :weight bold
+                      :underline nil))
+        ("CALL" .
+         (:foreground "misty rose"
+                      :weight bold
+                      :underline nil))
+        ("TODO" .
+         (:foreground "dark magenta"
+                      :weight bold
+                      :underline nil))
+        ("DONE" .
+         (:foreground "spring green"
+                      :weight bold
+                      :underline nil))
+        ("CHECK" .
+         (:foreground "gold"
+                      :weight bold
+                      :underline nil))))
