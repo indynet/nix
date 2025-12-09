@@ -188,7 +188,8 @@
 (setq org-todo-keywords
         '((sequence "CHECK"               "|" "DONE")
           (sequence "CALL"                "|" "DONE")
-          (sequence "TODO" "WAITING"      "|" "DONE")
+          (sequence "TODO"                "|" "DONE")
+          (sequence "TASK" "IN-PROGRESS"  "|" "DONE")
           (sequence "PLAN"                "|" "DONE" "CANCELLED")
           (sequence "APPOINTMENT" "VISIT" "|" "DONE" "CANCELLED")))
 
