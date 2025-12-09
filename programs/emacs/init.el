@@ -278,10 +278,6 @@
          (:foreground "misty rose"
                       :weight bold
                       :underline nil))
-        ("TODO" .
-         (:foreground "dark magenta"
-                      :weight bold
-                      :underline nil))
         ("DONE" .
          (:foreground "spring green"
                       :weight bold
