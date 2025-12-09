@@ -101,11 +101,12 @@
 (defun transition-done (n-done n-not-done)
   "Transition to DONE if statistics is complete"
   (let (org-log-done org-todo-log-states)
-    (org-todo (if (= n-not-done 0) "DONE" "TODO")))
-  (org-map-entries
-   (lambda ()
-     (org-todo "TODO"))
-     nil 'tree))
+    (org-todo (if (= n-not-done 0) "DONE" "TODO"))
+    (when (= n-not-done 0)
+      (org-map-entries
+       (lambda ()
+         (org-todo "TODO"))
+       nil 'tree))))
 
 (add-hook 'org-after-todo-state-change-hook 'reset-checkboxes)
 (add-hook 'org-after-todo-statistics-hook 'transition-done)
