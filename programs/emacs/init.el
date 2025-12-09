@@ -170,6 +170,11 @@
 
 (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
 
+;; org-super-agenda
+
+(require 'org-super-agenda)
+(add-hook 'org-agenda-mode-hook 'org-super-agenda-mode)
+
 ;; org-recur
 
 (require 'org-recur)
