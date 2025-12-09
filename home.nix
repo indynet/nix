@@ -37,8 +37,9 @@ in {
   gtk                          = i ./home/gtk.nix;
 
   services                     = {
-    blanket = i ./services/blanket.nix;
-    mako    = i ./services/mako.nix;
+    syncthing = i ./services/syncthing.nix;
+    blanket   = i ./services/blanket.nix;
+    mako      = i ./services/mako.nix;
   };
 
   programs                     = {
