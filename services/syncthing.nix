@@ -1,8 +1,6 @@
 { global, pkgs, ... }:
 
 {
-  openDefaultPorts = true;
-
   settings         = {
     folders = global.sync.folders;
     devices = global.sync.devices;
