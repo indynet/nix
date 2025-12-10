@@ -18,6 +18,8 @@ in {
     lua-mode
     nix-mode
     ligature
+    poly-org
+    polymode
     envrc
     magit
     smex
