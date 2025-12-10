@@ -13,6 +13,12 @@ with pkgs.lib;
 
     "$m"      = "SUPER";
 
+    env       = [
+      "LIBVA_DRIVER_NAME,nvidia"
+      "__GLX_VENDER_LIBRARY_NAME,nvidia"
+      "AQ_DRM_DEVICES,/dev/dri/card0"
+    ];
+
     monitorv2 = [
       {
         output = global.output.name;
