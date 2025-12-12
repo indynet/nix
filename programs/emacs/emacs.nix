@@ -15,9 +15,11 @@ in {
     inheritenv
     rust-mode
     org-recur
+    poly-org
     lua-mode
     nix-mode
     ligature
+    polymode
     envrc
     magit
     smex
