@@ -1,43 +1,13 @@
-;; basic
+(load-theme 'gruber-darket t nil)
 
 (add-to-list 'default-frame-alist `(font . "Iosevka-20"))
 
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode +1)
-
-(setq-default tab-width 8)
-
-(scroll-bar-mode   -1)
-(menu-bar-mode     -1)
-(tool-bar-mode     -1)
-
-(ido-mode 1)
-(ido-everywhere 1)
-
-(load-theme 'gruber-darker t nil)
-
 (setq-default indent-tabs-mode nil)
-
-;; util
-
-(defun wkdy (date)
-  "Return t if DATE is a weekday."
-  (memq (calendar-day-of-week date) '(1 2 3 4 5)))
-
-;; compile-mode
-
-(setq compilation-scroll-output t)
-
-;; enable ido??
-
-(require 'ido)
-
-(ido-mode t)
-(ido-everywhere t)
-
-;; binds
-
-(keymap-global-set "M-p" "C-y")
+(scroll-bar-mode -1)
+(menu-bar-mode   -1)
+(tool-bar-mode   -1)
 
 (defun pop-next ()
   (forward-line 1)
@@ -52,86 +22,40 @@
     (insert " " nl)))
 
 (defun dotf ()
-  (interactive)
+  (interactive) 
   (join-next))
 
 (keymap-global-set "C-." 'dotf)
 
-;; rust-mode
+(keymap-global-set "M-p" "C-y")
 
-(require 'rust-mode)
+(add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
 
-;; haskell-mode
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
-(require 'haskell-interactive-mode)
-(require 'haskell-process)
+(require 'org-super-agenda)
 
-(define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
-(define-key haskell-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
-(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
-(define-key haskell-mode-map (kbd "C-c C-t") 'haskell-process-do-type)
-(define-key haskell-mode-map (kbd "C-c C-i") 'haskell-process-do-info)
-(define-key haskell-mode-map (kbd "C-c i") 'haskell-navigate-imports)
-(define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
-(define-key haskell-mode-map (kbd "C-c c") 'haskell-process-cabal)
+(add-hook 'org-super-agenda-mode-hook
+          'org-super-agenda-mode)
 
-(setq haskell-indentation-where-post-offset 8)
-(setq haslell-indentation-where-pre-offset 8)
-(setq haskell-indentation-starter-offset 8)
-(setq haskell-indentation-layout-offset 8)
-(setq haskell-indentation-left-offset 8)
-
-(add-hook 'haskell-mode-hook
-          (lambda ()
-            (setq tab-width 8)))
-
-(add-hook 'haskell-mode-hook
-          'interactive-haskell-mode)
-
-;; org-mode
-
-(defun reset-checkboxes ()
-  "Reset all checkboxes if DONE."
-  (when (string= org-state "DONE")
-    (org-map-entries
-     (lambda ()
-       (org-reset-checkbox-state-subtree))
-     nil 'tree)))
-
-(defun transition-done (n-done n-not-done)
-  "Transition to DONE if statistics is complete"
-  (let (org-log-done org-todo-log-states)
-    (org-todo (if (= n-not-done 0) "DONE" "TODO"))
-    (when (= n-not-done 0)
-      (org-map-entries
-       (lambda ()
-         (org-todo "TODO"))
-       nil 'tree))))
-
-(add-hook 'org-after-todo-state-change-hook 'reset-checkboxes)
-(add-hook 'org-after-todo-statistics-hook 'transition-done)
-
-(setq org-return-follows-link t)
-(setq org-startup-indented t)
-
-(setq org-enforce-todo-checkbox-dependencies t)
-(setq org-checkbox-hierarchical-statistics t)
-(setq org-enforce-todo-dependencies t)
-
-(setq org-startup-folded 'fold)
-
-(add-hook 'org-mode-hook
-          (lambda ()
-            "checkbox prettify"
-            (push '("[ ]" . "☐") prettify-symbols-alist)
-            (push '("[X]" . "☑") prettify-symbols-alist)
-            (push '("[-]" . "❍") prettify-symbols-alist)
-            (prettify-symbols-mode)))
-
-;; multiple-cursors
+(setq org-super-agenda-groups
+    '((:order-multi (1 (:name "Appointments"
+                              :time-grid t
+                              :todo "VISIT")
+                       (:name "Upcoming Appointments"
+                              :time-grid t
+                              :todo "APPOINTMENT")))
+      (:name "Important"
+             :tag "important"
+             :priority "A")
+      (:name "Personal"
+             :tag "personal"
+             :priority "B")
+      (:name "Chores"
+             :tag "chore"
+             :priority "C")))
 
 (require 'multiple-cursors)
-
 (global-set-key (kbd "C-:") 'mc/skip-to-previous-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-\"") 'mc/skip-to-next-like-this)
@@ -139,79 +63,16 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 
-;; smex
-
-(require 'smex)
-
-(smex-initialize)
-
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-(global-set-key (kbd "M-x") 'smex)
-
-;; rainbow-*
-
-(add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-
-;; ligature
-
-(ligature-set-ligatures 'prog-mode '("--" "---" "==" "===" "!=" "!==" "=!="
-                                     "=:=" "=/=" "<=" ">=" "&&" "&&&" "&=" "++" "+++" "***" ";;" "!!"
-                                     "??" "???" "?:" "?." "?=" "<:" ":<" ":>" ">:" "<:<" "<>" "<<<" ">>>"
-                                     "<<" ">>" "||" "-|" "_|_" "|-" "||-" "|=" "||=" "##" "###" "####"
-                                     "#{" "#[" "]#" "#(" "#?" "#_" "#_(" "#:" "#!" "#=" "^=" "<$>" "<$"
-                                     "$>" "<+>" "<+" "+>" "<*>" "<*" "*>" "</" "</>" "/>" "<!--" "<#--"
-                                     "-->" "->" "->>" "<<-" "<-" "<=<" "=<<" "<<=" "<==" "<=>" "<==>"
-                                     "==>" "=>" "=>>" ">=>" ">>=" ">>-" ">-" "-<" "-<<" ">->" "<-<" "<-|"
-                                     "<=|" "|=>" "|->" "<->" "<~~" "<~" "<~>" "~~" "~~>" "~>" "~-" "-~"
-                                     "~@" "[||]" "|]" "[|" "|}" "{|" "[<" ">]" "|>" "<|" "||>" "<||"
-                                     "|||>" "<|||" "<|>" "..." ".." ".=" "..<" ".?" "::" ":::" ":=" "::="
-                                     ":?" ":?>" "//" "///" "/*" "*/" "/=" "//=" "/==" "@_" "__" "???"
-                                     "<:<" ";;;"))
-(global-ligature-mode t)
-
-;; tramp
-
-(with-eval-after-load 'tramp
-  (add-to-list 'tramp-remote-path 'tramp-own-remote-path))
-
-;; org-superstar
-
-(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
-
-;; org-super-agenda
-
-(require 'org-super-agenda)
-(add-hook 'org-agenda-mode-hook 'org-super-agenda-mode)
-
-(setq org-super-agenda-groups
-      '((:order-multi (1 (:name "Appointments"
-                                :time-grid t
-                                :todo "VISIT")
-                         (:name "Upcoming Appointments"
-                                :time-grid t
-                                :todo "APPOINTMENT")))
-        (:name "Important"
-               :tag "important"
-               :priority "A")
-        (:name "Personal"
-               :tag "personal"
-               :priority "B")
-        (:name "Chores"
-               :tag "chore"
-               :priority "C")))
-
-;; org-recur
+(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1))
 
 (require 'org-recur)
 
-(add-hook 'org-mode-hook #'org-recur-mode)
 (add-hook 'org-agenda-mode-hook #'org-recur-agenda-mode)
+(add-hook 'org-mode-hook #'org-recur-mode)
 
-(define-key org-recur-mode-map (kbd "C-c d") 'org-recur-finish)
-(define-key org-recur-agenda-mode-map (kbd "d") 'org-recur-finish)
 (define-key org-recur-agenda-mode-map (kbd "C-c d") 'org-recur-finish)
+(define-key org-recur-agenda-mode-map (kbd "d") 'org-recur-finish)
+(define-key org-recur-mode-map (kbd "C-c d") 'org-recur-finish)
 
 (setq org-recur-finish-done t
       org-recur-finish-archive t)
@@ -227,27 +88,100 @@
   "Refresh org-agenda."
   (org-agenda-refresh))
 
-(setq org-log-done (quote time))
-(setq org-read-date-prefer-future 'time)
+(ligature-set-ligatures 'prog-mode '("--" "---" "==" "===" "!=" "!==" "=!="
+                                   "=:=" "=/=" "<=" ">=" "&&" "&&&" "&=" "++" "+++" "***" ";;" "!!"
+                                   "??" "???" "?:" "?." "?=" "<:" ":<" ":>" ">:" "<:<" "<>" "<<<" ">>>"
+                                   "<<" ">>" "||" "-|" "_|_" "|-" "||-" "|=" "||=" "##" "###" "####"
+                                   "#{" "#[" "]#" "#(" "#?" "#_" "#_(" "#:" "#!" "#=" "^=" "<$>" "<$"
+                                   "$>" "<+>" "<+" "+>" "<*>" "<*" "*>" "</" "</>" "/>" "<!--" "<#--"
+                                   "-->" "->" "->>" "<<-" "<-" "<=<" "=<<" "<<=" "<==" "<=>" "<==>"
+                                   "==>" "=>" "=>>" ">=>" ">>=" ">>-" ">-" "-<" "-<<" ">->" "<-<" "<-|"
+                                   "<=|" "|=>" "|->" "<->" "<~~" "<~" "<~>" "~~" "~~>" "~>" "~-" "-~"
+                                   "~@" "[||]" "|]" "[|" "|}" "{|" "[<" ">]" "|>" "<|" "||>" "<||"
+                                   "|||>" "<|||" "<|>" "..." ".." ".=" "..<" ".?" "::" ":::" ":=" "::="
+                                   ":?" ":?>" "//" "///" "/*" "*/" "/=" "//=" "/==" "@_" "__" "???"
+                                   "<:<" ";;;"))
+(global-ligature-mode t)
 
-;; inheritenv
+(setq compilation-scroll-output t)
+
+(require 'haskell-interactive-mode)
+(require 'haskell-process)
+
+(define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
+(define-key haskell-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
+(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
+(define-key haskell-mode-map (kbd "C-c C-t") 'haskell-process-do-type)
+(define-key haskell-mode-map (kbd "C-c C-i") 'haskell-process-do-info)
+(define-key haskell-mode-map (kbd "C-c i") 'haskell-navigate-imports)
+(define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
+(define-key haskell-mode-map (kbd "C-c c") 'haskell-process-cabal)
+
+(add-hook 'haskell-mode-hook
+          'interactive-haskell-mode)
+
+(with-eval-after-load 'tramp
+  (add-to-list 'tramp-remote-path 'tramp-own-remote-path))
 
 (require 'inheritenv)
-
-;; envrc-mode
-
 (envrc-global-mode)
+
 (setq envrc-show-summary-in-minibuffer nil)
 
-;; major cms
+(require 'smex)
+(smex-initialize)
+
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "M-x") 'smex)
+
+(require 'rust-mode)
+
+(defun realbox ()
+  "prettify checkboxes to real boxes"
+  (push '("[ ]" . "☐") prettify-symbols-alist)
+  (push '("[X]" . "☑") prettify-symbols-alist)
+  (push '("[-]" . "❍") prettify-symbols-alist)
+  (prettify-symbols-mode))
+          
+(defun uncheck ()
+  "uncheck checkboxes if parent is DONE"
+  (when (string= org-state "DONE")
+    (org-map-entries
+     (lambda ()
+       (org-reset-checkbox-state-subtree))
+     nil 'tree)))
+
+(defun todoful ()
+  "set DONE if statistics are set"
+  (let (org-log-done org-todo-log-states)
+    (org-todo (if (= n-not-done 0) "DONE" "TODO"))
+    (when (= n-not-done 0)
+      (org-map-entries
+       (lambda ()
+         (org-todo "TODO"))
+       nil 'tree))))
+
+(add-hook 'org-after-todo-state-change-hook 'uncheck)
+(add-hook 'org-after-todo-statistics-hook   'todoful)
+(add-hook 'org-mode-hook                    'realbox)
+
+(setq org-enforce-todo-checkbox-dependencies t)
+(setq org-checkbox-hierarchical-statistics t)
+(setq org-read-date-prefer-future 'time)
+(setq org-enforce-todo-dependencies t)
+(setq org-return-follows-link t)
+(setq org-startup-folded 'fold)
+(setq org-startup-indented t)
+(setq org-log-done 'time)
 
 (setq org-todo-keywords
-        '((sequence "CHECK"               "|" "DONE")
-          (sequence "CALL"                "|" "DONE")
-          (sequence "TODO"                "|" "DONE")
-          (sequence "TASK" "IN-PROGRESS"  "|" "DONE")
-          (sequence "PLAN"                "|" "DONE" "CANCELLED")
-          (sequence "APPOINTMENT" "VISIT" "|" "DONE" "CANCELLED")))
+      '((sequence "CHECK"               "|" "DONE")
+        (sequence "CALL"                "|" "DONE")
+        (sequence "TODO"                "|" "DONE")
+        (sequence "TASK" "IN-PROGRESS"  "|" "DONE")
+        (sequence "PLAN"                "|" "DONE" "CANCELLED")
+        (sequence "APPOINTMENT" "VISIT" "|" "DONE" "CANCELLED")))
 
 (setq org-todo-keyword-faces
       '(("APPOINTMENT" .
@@ -286,3 +220,8 @@
          (:foreground "gold"
                       :weight bold
                       :underline nil))))
+
+(require 'ido)
+
+(ido-everywhere 1)
+(ido-mode 1)
