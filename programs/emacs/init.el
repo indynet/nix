@@ -1,4 +1,4 @@
-(load-theme 'gruber-darket t nil)
+(load-theme 'gruber-darker t nil)
 
 (add-to-list 'default-frame-alist `(font . "Iosevka-20"))
 
@@ -63,7 +63,7 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 
-(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1))
+(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
 
 (require 'org-recur)
 

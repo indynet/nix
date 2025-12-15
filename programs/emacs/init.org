@@ -4,7 +4,7 @@
 * Window
 ** Theme
 #+begin_src elisp :tangle yes
-  (load-theme 'gruber-darket t nil)
+  (load-theme 'gruber-darker t nil)
 #+end_src
 ** Font
 #+begin_src elisp :tangle yes
@@ -93,7 +93,7 @@
 #+end_src
 ** org-superstar
 #+begin_src elisp :tangle yes
-  (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1))
+  (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
 #+end_src
 ** org-recur
 #+begin_src elisp :tangle yes
