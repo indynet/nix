@@ -67,9 +67,7 @@
 
 (require 'whitespace)
 
-(setq whitespace-style
-      '(face tabs spaces lines newline missing-newline-at-eof empty
-             indentation space-after-tab space-before-tab space-mark tab-mark))
+(setq whitespace-style '(face spaces space-mark))
 
 (add-hook 'prog-mode-hook 'whitespace-mode)
 
