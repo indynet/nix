@@ -65,6 +65,11 @@
 
 (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
 
+(require 'whitespace)
+(setq whitespace-style
+      '(face tabs spaces lines newline missing-newline-at-eof empty
+            indentation space-after-tab space-before-tab space-mark tab-mark))
+
 (require 'org-recur)
 
 (add-hook 'org-agenda-mode-hook #'org-recur-agenda-mode)

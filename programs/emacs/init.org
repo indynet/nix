@@ -95,6 +95,13 @@
 #+begin_src elisp :tangle yes
   (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
 #+end_src
+** whitespace
+#+begin_src elisp :tangle yes
+  (require 'whitespace)
+  (setq whitespace-style
+        '(face tabs spaces lines newline missing-newline-at-eof empty
+              indentation space-after-tab space-before-tab space-mark tab-mark))
+#+end_src
 ** org-recur
 #+begin_src elisp :tangle yes
   (require 'org-recur)
