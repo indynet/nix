@@ -15,6 +15,7 @@ in {
     telegram-desktop
     _1password-gui
     _1password-cli
+    prismlauncher
     pavucontrol
     alsa-utils
     iosevka
