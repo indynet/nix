@@ -49,7 +49,7 @@ in {
     starship = i ./programs/starship.nix;
     hyprlock = i ./programs/hyprlock.nix;
     wezterm  = i ./programs/wezterm/wezterm.nix;
-    vesktop  = i ./programs/vesktop.nix;
+#   vesktop  = i ./programs/vesktop.nix;
     direnv   = i ./programs/direnv.nix;
     nixvim   = i ./programs/nixvim/nixvim.nix;
     waybar   = i ./programs/waybar/waybar.nix;
