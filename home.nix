@@ -18,6 +18,7 @@ in {
     prismlauncher
     pavucontrol
     alsa-utils
+    obs-studio
     iosevka
     ripgrep
     spotify
