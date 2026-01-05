@@ -27,6 +27,8 @@
 
 (keymap-global-set "C-." 'dotf)
 
+(keymap-global-set "M-p" "C-y")
+
 (add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
 
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
@@ -65,17 +67,7 @@
 
 (require 'whitespace)
 
-(setq whitespace-style
-      '(face tabs spaces lines newline missing-newline-at-eof empty
-             indentation space-after-tab space-before-tab space-mark tab-mark))
-
-(add-hook 'prog-mode-hook 'whitespace-mode)
-
-(require 'whitespace)
-
-(setq whitespace-style
-      '(face tabs spaces lines newline missing-newline-at-eof empty
-             indentation space-after-tab space-before-tab space-mark tab-mark))
+(setq whitespace-style '(face spaces space-mark))
 
 (add-hook 'prog-mode-hook 'whitespace-mode)
 
@@ -234,3 +226,8 @@
          (:foreground "gold"
                       :weight bold
                       :underline nil))))
+
+(require 'ido)
+
+(ido-everywhere 1)
+(ido-mode 1)
