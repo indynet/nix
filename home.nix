@@ -19,7 +19,6 @@ in {
     pavucontrol
     alsa-utils
     obs-studio
-    strawberry
     iosevka
     ripgrep
     spotify
@@ -43,6 +42,7 @@ in {
     syncthing = i ./services/syncthing.nix;
     blanket   = i ./services/blanket.nix;
     mako      = i ./services/mako.nix;
+    mpd       = i ./services/mpd.nix;
   };
 
   programs                     = {
@@ -55,6 +55,7 @@ in {
     nixvim   = i ./programs/nixvim/nixvim.nix;
     waybar   = i ./programs/waybar/waybar.nix;
     emacs    = i ./programs/emacs/emacs.nix;
+    rmpc     = i ./programs/rmpc/rmpc.nix;
     wofi     = i ./programs/wofi/wofi.nix;
     bash     = i ./programs/bash.nix;
     ssh      = i ./programs/ssh.nix;
