@@ -1,3 +1,5 @@
+(setq inhibit-splash-screen 0)
+
 (load-theme 'gruber-darker t nil)
 
 (add-to-list 'default-frame-alist `(font . "Iosevka-20"))
