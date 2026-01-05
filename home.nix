@@ -19,6 +19,7 @@ in {
     pavucontrol
     alsa-utils
     obs-studio
+    strawberry
     iosevka
     ripgrep
     spotify
