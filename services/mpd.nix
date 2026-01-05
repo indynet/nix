@@ -1,1 +1,5 @@
-{ ... }: {}
+{ ... }:
+
+{
+  musicDirectory = "~/org/music";
+}
