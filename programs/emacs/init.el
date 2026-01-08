@@ -1,3 +1,5 @@
+(setq inhibit-splash-screen t)
+
 (load-theme 'gruber-darker t nil)
 
 (add-to-list 'default-frame-alist `(font . "Iosevka-20"))
@@ -133,6 +135,8 @@
 (envrc-global-mode)
 
 (setq envrc-show-summary-in-minibuffer nil)
+
+(setq bongo-enabled-backends '(vlc))
 
 (require 'smex)
 (smex-initialize)
