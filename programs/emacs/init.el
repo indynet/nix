@@ -5,7 +5,7 @@
 
 (setq initial-buffer-choice t)
 
-(setq display-time-format "  %b %d %R %p  "
+(setq display-time-format "  %b%e %l:%M %p  "
       display-time-default-load-average nil)
 (display-time)
 
