@@ -22,6 +22,7 @@ in {
     iosevka
     ripgrep
     spotify
+    unzip
     slurp
     grim
     bash
@@ -42,7 +43,6 @@ in {
     syncthing = i ./services/syncthing.nix;
     blanket   = i ./services/blanket.nix;
     mako      = i ./services/mako.nix;
-    mpd       = i ./services/mpd.nix;
   };
 
   programs                     = {
