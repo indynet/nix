@@ -3,7 +3,7 @@
 
 * Basics
 #+begin_src elisp :tangle yes
-  (setq inhibit-splash-screen t)
+  (setq inhibit-startup-screen t)
 #+end_src
 * Window
 ** Theme
