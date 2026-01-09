@@ -2,4 +2,5 @@
 
 {
   musicDirectory = "~/org/music";
+  extraConfig    = '''';
 }
