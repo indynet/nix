@@ -1,5 +1,11 @@
-(setq inhibit-startup-message t)
-(setq inhibit-startup-screen t)
+(setq initial-scratch-message nil)
+
+(add-hook 'emacs-startup-hook
+          (lambda()
+            (setq inhibit-startup-message t
+                  inhibit-startup-message t)))
+
+(setq initial-buffer-choice t)
 
 (load-theme 'gruber-darker t nil)
 
