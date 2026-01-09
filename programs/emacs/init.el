@@ -1,5 +1,3 @@
-(setq initial-scratch-message nil)
-
 (add-hook 'emacs-startup-hook
           (lambda()
             (setq inhibit-startup-message t
