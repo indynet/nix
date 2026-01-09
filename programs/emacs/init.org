@@ -182,9 +182,10 @@
 
   (setq envrc-show-summary-in-minibuffer nil)
 #+end_src
-** bongo
+** emms
 #+begin_src elisp :tangle yes
-  (setq bongo-enabled-backends '(vlc))
+  (emms-all)
+  (setq emms-player-list '(emms-player-vlc))
 #+end_src
 ** smex
 #+begin_src elisp :tangle yes

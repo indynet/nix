@@ -22,7 +22,7 @@ in {
     polymode
     envrc
     magit
-    bongo
+    emms
     smex
   ];
 }

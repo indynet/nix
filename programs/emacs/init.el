@@ -136,7 +136,8 @@
 
 (setq envrc-show-summary-in-minibuffer nil)
 
-(setq bongo-enabled-backends '(vlc))
+(emms-all)
+(setq emms-player-list '(emms-player-vlc))
 
 (require 'smex)
 (smex-initialize)
