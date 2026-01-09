@@ -136,10 +136,10 @@
 
 (setq envrc-show-summary-in-minibuffer nil)
 
+(setq mpdel-prefix-key (kbd "C-c C-z"))
+
 (require 'mpdel)
 (mpdel-mode)
-
-(setq mpdel-prefix-key (kbd "C-c C-z"))
 
 (require 'smex)
 (smex-initialize)

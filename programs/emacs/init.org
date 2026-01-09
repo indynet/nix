@@ -184,10 +184,10 @@
 #+end_src
 ** mpdel
 #+begin_src elisp :tangle yes
+  (setq mpdel-prefix-key (kbd "C-c C-z"))
+  
   (require 'mpdel)
   (mpdel-mode)
-
-  (setq mpdel-prefix-key (kbd "C-c C-z"))
 #+end_src
 ** smex
 #+begin_src elisp :tangle yes
