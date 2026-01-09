@@ -1,4 +1,4 @@
-{}:
+{ ... }:
 
 {
   musicDirectory = "/home/indy/org/music";
