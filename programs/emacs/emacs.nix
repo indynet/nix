@@ -22,7 +22,6 @@ in {
     polymode
     envrc
     magit
-    emms
     smex
   ];
 }

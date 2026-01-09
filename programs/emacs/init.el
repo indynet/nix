@@ -145,9 +145,6 @@
 
 (setq envrc-show-summary-in-minibuffer nil)
 
-(emms-all)
-(setq emms-player-list '(emms-player-vlc))
-
 (require 'smex)
 (smex-initialize)
 
