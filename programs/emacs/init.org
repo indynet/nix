@@ -182,12 +182,10 @@
 
   (setq envrc-show-summary-in-minibuffer nil)
 #+end_src
-** mpdel
+** emms
 #+begin_src elisp :tangle yes
-  (setq mpdel-prefix-key (kbd "C-c C-z"))
-  
-  (require 'mpdel)
-  (mpdel-mode)
+  (emms-all)
+  (setq emms-player-list '(emms-player-vlc))
 #+end_src
 ** smex
 #+begin_src elisp :tangle yes

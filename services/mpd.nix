@@ -1,6 +1,0 @@
-{ ... }:
-
-{
-  musicDirectory = "~/org/music";
-  extraConfig    = '''';
-}

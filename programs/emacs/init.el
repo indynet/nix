@@ -136,10 +136,8 @@
 
 (setq envrc-show-summary-in-minibuffer nil)
 
-(setq mpdel-prefix-key (kbd "C-c C-z"))
-
-(require 'mpdel)
-(mpdel-mode)
+(emms-all)
+(setq emms-player-list '(emms-player-vlc))
 
 (require 'smex)
 (smex-initialize)

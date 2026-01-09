@@ -55,7 +55,6 @@ in {
     nixvim   = i ./programs/nixvim/nixvim.nix;
     waybar   = i ./programs/waybar/waybar.nix;
     emacs    = i ./programs/emacs/emacs.nix;
-    rmpc     = i ./programs/rmpc/rmpc.nix;
     wofi     = i ./programs/wofi/wofi.nix;
     bash     = i ./programs/bash.nix;
     ssh      = i ./programs/ssh.nix;
