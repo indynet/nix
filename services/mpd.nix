@@ -11,5 +11,9 @@
         mixer_device	"default"
         mixer_control	"PCM"
       }
+
+      decoder {
+        plugin "flac"
+      }
  '';
 }
