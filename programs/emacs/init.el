@@ -1,3 +1,4 @@
+(setq inhibit-startup-message t)
 (setq inhibit-startup-screen t)
 
 (load-theme 'gruber-darker t nil)

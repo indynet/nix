@@ -3,6 +3,7 @@
 
 * Basics
 #+begin_src elisp :tangle yes
+  (setq inhibit-startup-message t)
   (setq inhibit-startup-screen t)
 #+end_src
 * Window
