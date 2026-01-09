@@ -9,6 +9,10 @@
                     inhibit-startup-message t)))
 
   (setq initial-buffer-choice t)
+
+  (setq display-time-format "  %b %d %R %p  "
+        display-time-default-load-average nil)
+  (display-time)
 #+end_src
 * Window
 ** Theme

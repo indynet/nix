@@ -5,6 +5,10 @@
 
 (setq initial-buffer-choice t)
 
+(setq display-time-format "  %b %d %R %p  "
+      display-time-default-load-average nil)
+(display-time)
+
 (load-theme 'gruber-darker t nil)
 
 (add-to-list 'default-frame-alist `(font . "Iosevka-20"))
