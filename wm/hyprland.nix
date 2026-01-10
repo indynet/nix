@@ -8,12 +8,17 @@ with pkgs.lib;
   portalPackage   = global.hyprlandPkgs.xdg-desktop-portal-hyprland;
   package         = global.hyprlandPkgs.hyprland;
 
+  plugins         = [
+    pkgs.hyprlandPlygins.hyprbars
+    pkgs.hyprlandPlugins.hy3
+  ];
+
   settings        = {
     animations.enabled = false;
 
-    "$m"      = "SUPER";
+    "$m"               = "SUPER";
 
-    monitorv2 = [
+    monitorv2          = [
       {
         output = global.output.name;
         mode   = global.output.mode;
@@ -21,12 +26,12 @@ with pkgs.lib;
       }
     ];
 
-    bindm     = [
-    	"$m SHIFT, mouse:272, resizewindow"
-	"$m, mouse:272, movewindow"
+    bindm              = [
+      "$m SHIFT, mouse:272, resizewindow"
+      "$m, mouse:272, movewindow"
     ];
 
-    bind      = let
+    bind               = let
       ito10 = builtins.genList builtins.toString 9;
       binds = concatMap (flip map ito10) [
         (x: "$m SHIFT, ${x}, movetoworkspace, ${x}")
@@ -45,7 +50,7 @@ with pkgs.lib;
 				"$m, m, exit"
 	  ];
 
-    general   = {
+    general            = {
 				"col.inactive_border" = "0xff444444";
 				"col.active_border"   = "0xff444444";
 
