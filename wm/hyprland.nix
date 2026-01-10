@@ -10,7 +10,6 @@ with pkgs.lib;
 
   plugins         = [
     pkgs.hyprlandPlugins.hyprbars
-    pkgs.hyprlandPlugins.hy3
   ];
 
   settings        = {
