@@ -9,7 +9,7 @@ with pkgs.lib;
   package         = global.hyprlandPkgs.hyprland;
 
   plugins         = [
-    pkgs.hyprlandPlygins.hyprbars
+    pkgs.hyprlandPlugins.hyprbars
     pkgs.hyprlandPlugins.hy3
   ];
 
