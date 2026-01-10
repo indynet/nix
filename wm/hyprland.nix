@@ -9,7 +9,7 @@ with pkgs.lib;
   package         = global.hyprlandPkgs.hyprland;
 
   plugins         = [
-    global.hyprlandPlugins.hyprbars
+    global.hyprlandPlugins.hy3
   ];
 
   settings        = {
@@ -58,9 +58,8 @@ with pkgs.lib;
     };
 
     plugin             = {
-      hyprbars = {
-        enabled    = true;
-        bar_height = 20;
+      hy3 = {
+        enabled = true;
       };
     };
   };
