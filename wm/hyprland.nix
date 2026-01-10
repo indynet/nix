@@ -9,7 +9,7 @@ with pkgs.lib;
   package         = global.hyprlandPkgs.hyprland;
 
   plugins         = [
-    global.hyprlandPlugins.hy3
+    global.hyprlandPlugins.borders-plus-plus
   ];
 
   settings        = {
@@ -58,7 +58,7 @@ with pkgs.lib;
     };
 
     plugin             = {
-      hy3 = {
+      borders-plus-plus = {
         enabled = true;
       };
     };
