@@ -59,6 +59,7 @@ with pkgs.lib;
 
     plugin             = {
       hyprbars = {
+        enabled    = true;
         bar_height = 20;
       };
     };
