@@ -20,6 +20,7 @@ in {
     nix-mode
     ligature
     polymode
+    zig-mode
     envrc
     magit
     smex
