@@ -122,6 +122,10 @@
 
 (setq zig-format-on-save nil)
 
+(defun zig-compile-run ()
+  (interactive)
+  (compile "zig build run --color off"))
+
 (setq compilation-scroll-output t)
 
 (require 'haskell-interactive-mode)

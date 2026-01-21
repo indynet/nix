@@ -160,7 +160,11 @@
 #+end_src  
 ** zig-mode
 #+begin_src elisp :tangle yes
-(setq zig-format-on-save nil)
+  (setq zig-format-on-save nil)
+
+  (defun zig-compile-run ()
+    (interactive)
+    (compile "zig build run --color off"))
 #+end_src
 ** compile
 #+begin_src elisp :tangle yes
