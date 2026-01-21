@@ -158,6 +158,10 @@
                                      "<:<" ";;;"))
   (global-ligature-mode t)
 #+end_src  
+** zig-mode
+#+begin_src elisp :tangle yes
+(setq zig-format-on-save nil)
+#+end_src
 ** compile
 #+begin_src elisp :tangle yes
   (setq compilation-scroll-output t)

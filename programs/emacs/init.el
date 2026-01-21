@@ -120,6 +120,8 @@
                                    "<:<" ";;;"))
 (global-ligature-mode t)
 
+(setq zig-format-on-save nil)
+
 (setq compilation-scroll-output t)
 
 (require 'haskell-interactive-mode)
