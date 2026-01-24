@@ -68,6 +68,7 @@ in {
     text       = ''
     #!/bin/sh
     nix flake update indynet --flake /etc/nixos
+    nixos-rebuild switch
     '';
   };
 
