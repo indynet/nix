@@ -201,6 +201,7 @@
 (setq org-todo-keywords
       '((sequence "CHECK"               "|" "DONE")
         (sequence "CALL"                "|" "DONE")
+        (sequence "FEED"                "|" "DONE")
         (sequence "TODO"                "|" "DONE")
         (sequence "TASK" "IN-PROGRESS"  "|" "DONE")
         (sequence "PLAN"                "|" "DONE" "CANCELLED")
@@ -237,6 +238,10 @@
                       :underline nil))
         ("DONE" .
          (:foreground "spring green"
+                      :weight bold
+                      :underline nil))
+        ("FEED" .
+         (:foreground "gold"
                       :weight bold
                       :underline nil))
         ("CHECK" .

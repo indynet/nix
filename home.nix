@@ -61,6 +61,16 @@ in {
     git      = i ./programs/git.nix;
   };
 
+  home.file."side-update.sh" = {
+    enable     = true;
+    executable = true;
+
+    text       = ''
+    #!/bin/sh
+    nix flake update indynet --flake /etc/nixos
+    '';
+  };
+
   home.file."full-update.sh" = {
     enable     = true;
 
