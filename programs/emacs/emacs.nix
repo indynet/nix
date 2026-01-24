@@ -22,8 +22,10 @@ in {
     polymode
     org-roam
     zig-mode
+    emacsql
     envrc
     magit
+    dash
     smex
   ];
 }
