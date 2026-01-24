@@ -126,6 +126,8 @@
   (interactive)
   (compile "zig build run --color off"))
 
+(setq org-roam-directory "~/org/roam")
+
 (setq compilation-scroll-output t)
 
 (require 'haskell-interactive-mode)
