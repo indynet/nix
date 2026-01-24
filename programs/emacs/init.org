@@ -166,6 +166,9 @@
     (interactive)
     (compile "zig build run --color off"))
 #+end_src
+** org-roam
+#+being_src elisp :tangle yes
+#+end_src
 ** compile
 #+begin_src elisp :tangle yes
   (setq compilation-scroll-output t)

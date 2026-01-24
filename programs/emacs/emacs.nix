@@ -20,6 +20,7 @@ in {
     nix-mode
     ligature
     polymode
+    org-roam
     zig-mode
     envrc
     magit
