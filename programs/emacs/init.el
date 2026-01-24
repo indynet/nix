@@ -127,6 +127,11 @@
   (compile "zig build run --color off"))
 
 (setq org-roam-directory "~/org/roam")
+(org-roam-db-autosync-mode)
+
+(define-key org-roam-mode-map (kbd "C-c n c") 'org-roam-node-capture)
+(define-key org-roam-mode-map (kbd "C-c n i") 'org-roam-node-insert)
+(define-key org-roam-mode-map (kbd "C-c n f") 'org-roam-node-find)
 
 (setq compilation-scroll-output t)
 
