@@ -12,13 +12,11 @@ in {
 
   home.packages                = with pkgs; [
     nerd-fonts.iosevka
-    telegram-desktop
     _1password-gui
     _1password-cli
     prismlauncher
-    pavucontrol
+    hyprpwcenter
     alsa-utils
-    obs-studio
     iosevka
     ripgrep
     spotify
@@ -40,11 +38,12 @@ in {
   gtk                          = i ./home/gtk.nix;
 
   services                     = {
-    syncthing = i ./services/syncthing.nix;
-    hyprpaper = i ./services/hyprpaper.nix;
-    blanket   = i ./services/blanket.nix;
-    mako      = i ./services/mako.nix;
-    mpd       = i ./services/mpd.nix;
+    hyprpolkitagent = i ./services/hyprpolkitagent.nix;
+    syncthing       = i ./services/syncthing.nix;
+    hyprpaper       = i ./services/hyprpaper.nix;
+    blanket         = i ./services/blanket.nix;
+    mako            = i ./services/mako.nix;
+    mpd             = i ./services/mpd.nix;
   };
 
   programs                     = {
