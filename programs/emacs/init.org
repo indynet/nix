@@ -24,8 +24,6 @@
 ** Font
 #+begin_src elisp :tangle yes
   (add-to-list 'default-frame-alist `(font . "Iosevka-20"))
-
-  
 #+end_src
 ** Col
 #+begin_src elisp :tangle yes
