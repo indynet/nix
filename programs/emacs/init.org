@@ -259,6 +259,7 @@
   (setq org-enforce-todo-checkbox-dependencies t)
   (setq org-checkbox-hierarchical-statistics t)
   (setq org-read-date-prefer-future 'time)
+  (setq org-startup-with-inline-images t)
   (setq org-enforce-todo-dependencies t)
   (setq org-return-follows-link t)
   (setq org-startup-folded 'fold)
