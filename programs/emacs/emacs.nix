@@ -15,6 +15,7 @@ in {
     inheritenv
     rust-mode
     org-recur
+    qml-mode
     poly-org
     lua-mode
     nix-mode
