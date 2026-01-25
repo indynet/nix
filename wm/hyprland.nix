@@ -33,15 +33,17 @@ with pkgs.lib;
     bind               = let
       ito10 = builtins.genList builtins.toString 9;
       binds = concatMap (flip map ito10) [
+        (x: "ALT SHIFT, ${x}, movetoworkspace, ${x}")
+        (x: "ALT, ${x}, workspace, ${x}")
         (x: "$m SHIFT, ${x}, movetoworkspace, ${x}")
         (x: "$m, ${x}, workspace, ${x}")
       ];
     in binds ++ [
+      "$m, a, exec, [float; move 0 0] hyprpwcenter"
       "$m, p, exec, grim -g \"$(slurp)\""
       "$m, f, exec, wofi --show drun"
       "$m SHIFT, j, movewindow, l"
       "$m SHIFT, k, movewindow, r"
-      "$m, a, exec, hyprpwcenter"
       "$m, l, exec, hyprlock"
       "$m, v, togglefloating"
       "$m, q, exec, wezterm"
