@@ -1,3 +1,5 @@
+(add-to-list 'auto-mode-alist '("\\.razor\\'" . csharp-mode))
+
 (add-hook 'emacs-startup-hook
           (lambda()
             (setq inhibit-startup-message t
