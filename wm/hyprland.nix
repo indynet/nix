@@ -39,13 +39,13 @@ with pkgs.lib;
         (x: "$m, ${x}, workspace, ${x}")
       ];
     in binds ++ [
-      "$m, a, exec, [float; move 0 0] hyprpwcenter"
+      "$m, a, exec, [float] hyprpwcenter"
       "$m, p, exec, grim -g \"$(slurp)\""
       "$m, f, exec, wofi --show drun"
       "$m SHIFT, j, movewindow, l"
       "$m SHIFT, k, movewindow, r"
+      "ALT, v, togglefloating"
       "$m, l, exec, hyprlock"
-      "$m, v, togglefloating"
       "$m, q, exec, wezterm"
       "$m, j, movefocus, l"
       "$m, k, movefocus, r"
