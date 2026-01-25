@@ -26,8 +26,8 @@ with pkgs.lib;
     ];
 
     bindm              = [
-      "$m SHIFT, mouse:272, resizewindow"
-      "$m, mouse:272, movewindow"
+      "ALT SHIFT, mouse:272, resizewindow"
+      "ALT, mouse:272, movewindow"
     ];
 
     bind               = let
