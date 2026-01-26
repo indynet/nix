@@ -33,8 +33,6 @@ with pkgs.lib;
     bind               = let
       ito10 = builtins.genList builtins.toString 9;
       binds = concatMap (flip map ito10) [
-        (x: "ALT SHIFT, ${x}, movetoworkspace, ${x}")
-        (x: "ALT, ${x}, workspace, ${x}")
         (x: "$m SHIFT, ${x}, movetoworkspace, ${x}")
         (x: "$m, ${x}, workspace, ${x}")
       ];
