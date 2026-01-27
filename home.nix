@@ -41,6 +41,7 @@ in {
 
   services                     = {
     hyprpolkitagent = i ./services/hyprpolkitagent.nix;
+    mpd-mpris       = i ./services/mpd-mpris.nix;
     syncthing       = i ./services/syncthing.nix;
     hyprpaper       = i ./services/hyprpaper.nix;
     blanket         = i ./services/blanket.nix;
