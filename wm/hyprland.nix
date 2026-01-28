@@ -55,8 +55,13 @@ with pkgs.lib;
       "col.inactive_border" = "0xff444444";
       "col.active_border"   = "0xff444444";
 
-      gaps_out 	            = 5;
-      gaps_in  	            = 8;
+      gaps_out              = 15;
+      gaps_in               = 15;
+      border_size           = 5;
+    };
+
+    decoration         = {
+      rounding = 15;
     };
 
     plugin             = {
