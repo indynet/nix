@@ -59,8 +59,6 @@ with pkgs.lib;
       gaps_out              = 15;
       gaps_in               = 8;
 
-      border_size           = 4;
-
       layout                = "master";
     };
 
