@@ -1,4 +1,4 @@
-{ pkgs, global, ... }:
+n{ pkgs, global, ... }:
 
 with pkgs.lib;
 
@@ -13,7 +13,7 @@ with pkgs.lib;
   ];
 
   settings        = {
-    animations.enabled = false;
+    animations.enabled = true; # yes, please
 
     "$m"               = "SUPER";
 
