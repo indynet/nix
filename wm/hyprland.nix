@@ -56,14 +56,15 @@ with pkgs.lib;
       "col.inactive_border" = "0xff444444";
       "col.active_border"   = "0xff444444";
 
-      gaps_out              = 15;
+      gaps_out              = 8;
       gaps_in               = 8;
 
       layout                = "master";
     };
 
-    decoration         = {
-      rounding = 8;
+    misc               = {
+      enable_swallow = true;
+      swallow_regex  = "org\.wezfurlong\.wezterm";
     };
 
     plugin             = {
