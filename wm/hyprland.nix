@@ -1,4 +1,4 @@
-n{ pkgs, global, ... }:
+{ pkgs, global, ... }:
 
 with pkgs.lib;
 
