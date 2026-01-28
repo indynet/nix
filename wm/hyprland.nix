@@ -12,8 +12,9 @@ with pkgs.lib;
     global.hyprlandPlugins.borders-plus-plus
   ];
 
+
   settings        = {
-    animations.enabled = true; # yes, please
+    animations.enabled = false; # no, thanks
 
     "$m"               = "SUPER";
 
@@ -56,12 +57,11 @@ with pkgs.lib;
       "col.active_border"   = "0xff444444";
 
       gaps_out              = 15;
-      gaps_in               = 15;
-      border_size           = 5;
+      gaps_in               = 8;
     };
 
     decoration         = {
-      rounding = 15;
+      rounding = 8;
     };
 
     plugin             = {
