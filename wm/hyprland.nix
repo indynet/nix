@@ -55,8 +55,8 @@ with pkgs.lib;
       "col.inactive_border" = "0xff444444";
       "col.active_border"   = "0xff444444";
 
-      gaps_out 	            = 0;
-      gaps_in  	            = 0;
+      gaps_out 	            = 15;
+      gaps_in  	            = 15;
     };
 
     plugin             = {
