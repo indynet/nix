@@ -25,8 +25,6 @@ in {
     grim
     bash
     vlc
-  ] ++ [
-    global.quickshell
   ];
 
   imports                      = [
