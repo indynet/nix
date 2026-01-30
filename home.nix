@@ -50,18 +50,19 @@ in {
   };
 
   programs                     = {
-    chromium = i ./programs/chromium.nix;
-    starship = i ./programs/starship.nix;
-    hyprlock = i ./programs/hyprlock.nix;
-    wezterm  = i ./programs/wezterm/wezterm.nix;
-    vesktop  = i ./programs/vesktop.nix;
-    direnv   = i ./programs/direnv.nix;
-    nixvim   = i ./programs/nixvim/nixvim.nix;
-    emacs    = i ./programs/emacs/emacs.nix;
-    wofi     = i ./programs/wofi/wofi.nix;
-    bash     = i ./programs/bash.nix;
-    ssh      = i ./programs/ssh.nix;
-    git      = i ./programs/git.nix;
+    quickshell = i ./programs/quickshell.nix;
+    chromium   = i ./programs/chromium.nix;
+    starship   = i ./programs/starship.nix;
+    hyprlock   = i ./programs/hyprlock.nix;
+    wezterm    = i ./programs/wezterm/wezterm.nix;
+    vesktop    = i ./programs/vesktop.nix;
+    direnv     = i ./programs/direnv.nix;
+    nixvim     = i ./programs/nixvim/nixvim.nix;
+    emacs      = i ./programs/emacs/emacs.nix;
+    wofi       = i ./programs/wofi/wofi.nix;
+    bash       = i ./programs/bash.nix;
+    ssh        = i ./programs/ssh.nix;
+    git        = i ./programs/git.nix;
   };
 
   home.file."side-update.sh" = {
