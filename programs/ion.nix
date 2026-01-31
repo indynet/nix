@@ -1,4 +1,7 @@
 { ... }:
 
 {
+  shellAliases = {
+    ls = "eza";
+  };
 }
