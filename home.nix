@@ -22,7 +22,6 @@ in {
     iosevka
     ripgrep
     spotify
-    wine64
     unzip
     slurp
     grim
