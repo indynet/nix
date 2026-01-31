@@ -14,7 +14,7 @@ with pkgs.lib;
 
 
   settings        = {
-    animations.enabled = true; # yes, please
+    animations.enabled = false; # no, thanks
 
     "$m"               = "SUPER";
 
