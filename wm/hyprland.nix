@@ -17,7 +17,7 @@ with pkgs.lib;
 
     "$m"               = "SUPER";
 
-    env                = [o
+    env                = [
       "GRIM_DEFAULT_DIR,/home/${global.name}/Pictures"
       "XCURSOR_SIZE,24"
     ];
