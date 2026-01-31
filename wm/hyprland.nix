@@ -43,9 +43,9 @@ with pkgs.lib;
     in binds ++ [
       "$m, a, exec, [float] hyprpwcenter"
       "$m, p, exec, grim -g \"$(slurp)\""
-      "$m, f, exec, wofi --show drun"
       "$m SHIFT, j, movewindow, l"
       "$m SHIFT, k, movewindow, r"
+      "$m, f, exec, hyprlauncher"
       "ALT, v, togglefloating"
       "$m, l, exec, hyprlock"
       "$m, q, exec, wezterm"

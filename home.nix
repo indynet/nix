@@ -46,6 +46,7 @@ in {
   services                     = {
     hyprpolkitagent = i ./services/hyprpolkitagent.nix;
     mpd-discord-rpc = i ./services/mpd-discord-rpc.nix;
+    hyprlauncher    = i ./services/hyprlauncher.nix;
     mpd-mpris       = i ./services/mpd-mpris.nix;
     syncthing       = i ./services/syncthing.nix;
     hyprpaper       = i ./services/hyprpaper.nix;
@@ -65,7 +66,6 @@ in {
     nixvim     = i ./programs/nixvim/nixvim.nix;
     lutris     = i ./programs/lutris.nix;
     emacs      = i ./programs/emacs/emacs.nix;
-    wofi       = i ./programs/wofi/wofi.nix;
     eza        = i ./programs/eza.nix;
     ion        = i ./programs/ion.nix;
     ssh        = i ./programs/ssh.nix;
