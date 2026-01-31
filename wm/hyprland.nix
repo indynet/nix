@@ -14,7 +14,7 @@ with pkgs.lib;
 
   env             = [
     "GRIM_DEFAULT_DIR,/home/${global.name}/Pictures"
-  ]:
+  ];
 
   settings        = {
     animations.enabled = false; # no, thanks
