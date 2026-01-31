@@ -66,6 +66,7 @@ in {
     lutris     = i ./programs/lutris.nix;
     emacs      = i ./programs/emacs/emacs.nix;
     wofi       = i ./programs/wofi/wofi.nix;
+    eza        = i ./programs/eza.nix;
     ion        = i ./programs/ion.nix;
     ssh        = i ./programs/ssh.nix;
     git        = i ./programs/git.nix;
