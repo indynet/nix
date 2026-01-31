@@ -14,6 +14,10 @@ in {
     enableIonIntegration = true;
   };
 
+  home.shellAliases            = {
+    ls = "eza";
+  };
+
   home.packages                = with pkgs; [
     wineWowPackages.stable
     nerd-fonts.iosevka
