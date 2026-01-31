@@ -19,7 +19,7 @@ with pkgs.lib;
 
     env                = [
       "GRIM_DEFAULT_DIR,/home/${global.name}/Pictures"
-      "XCURSOR_SIZE,24"
+      "XCURSOR_SIZE,15"
     ];
 
     monitorv2          = [
