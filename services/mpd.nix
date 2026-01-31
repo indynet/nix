@@ -8,5 +8,5 @@
         type "pipewire"
         name "PIPEWIRE"
       }
-F9 '';
+  '';
 }
