@@ -12,14 +12,14 @@ with pkgs.lib;
     global.hyprlandPlugins.borders-plus-plus
   ];
 
-  env             = [
-    "GRIM_DEFAULT_DIR,/home/${global.name}/Pictures"
-  ];
-
   settings        = {
     animations.enabled = false; # no, thanks
 
     "$m"               = "SUPER";
+
+    env                = [
+      "GRIM_DEFAULT_DIR,/home/${global.name}/Pictures"
+    ];
 
     monitorv2          = [
       {
