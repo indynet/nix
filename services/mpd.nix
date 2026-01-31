@@ -8,9 +8,5 @@
         type "pipewire"
         name "PIPEWIRE"
       }
-
-      decoder {
-        plugin "flac"
-      }
- '';
+F9 '';
 }

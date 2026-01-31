@@ -62,12 +62,12 @@ in {
     hyprlock   = i ./programs/hyprlock.nix;
     wezterm    = i ./programs/wezterm/wezterm.nix;
     vesktop    = i ./programs/vesktop.nix;
+    nushell    = i ./programs/nushell.nix;
     direnv     = i ./programs/direnv.nix;
     nixvim     = i ./programs/nixvim/nixvim.nix;
     lutris     = i ./programs/lutris.nix;
     emacs      = i ./programs/emacs/emacs.nix;
     eza        = i ./programs/eza.nix;
-    ion        = i ./programs/ion.nix;
     ssh        = i ./programs/ssh.nix;
     git        = i ./programs/git.nix;
   };
@@ -110,6 +110,6 @@ in {
   };
 
   xdg.configFile."shell"                       = {
-    source = pkgs.lib.getExe pkgs.ion;
+    source = pkgs.lib.getExe pkgs.nushell;
   };
 }

@@ -1,5 +1,5 @@
 { ... }:
 
 {
-  enableIonIntegration = true;
+  enableNushellIntegration = true;
 }
