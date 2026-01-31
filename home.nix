@@ -30,7 +30,6 @@ in {
     slurp
     grim
     bash
-    wine
     vlc
   ];
 
