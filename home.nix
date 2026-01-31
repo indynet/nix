@@ -78,12 +78,10 @@ in {
     text   = ''
     font_family_monospace = Iosevka
     accent_secondary      = 0xFF98EAD4
-    small_font_size       = 15
     rounding_large        = 0
     rounding_small        = 0
     font_family           = Iosevka
     background            = 0xFF000000
-    font_size             = 20
     accent                = 0xFF655162
     '';
   };
