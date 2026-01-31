@@ -2,6 +2,6 @@
 
 {
   shellAliases = {
-    ls = "eza";
+    ls = "eza --icons always --colors always";
   };
 }
