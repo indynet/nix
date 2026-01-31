@@ -11,19 +11,26 @@ in {
   home.pointerCursor           = i ./home/cursor.nix;
 
   home.packages                = with pkgs; [
+    (wine.override { wineBuild = "wine64"; })
+    wineWowPackages.waylandFull
+    wineWowPackages.staging
+    wineWowPackages.stable
     nerd-fonts.iosevka
     _1password-gui
     _1password-cli
     prismlauncher
     hyprpwcenter
+    winetricks
     alsa-utils
     iosevka
     ripgrep
     spotify
+    wine64
     unzip
     slurp
     grim
     bash
+    wine
     vlc
   ];
 
