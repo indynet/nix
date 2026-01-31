@@ -10,6 +10,10 @@ in {
 
   home.pointerCursor           = i ./home/cursor.nix;
 
+  home.shell                   = {
+    enableIonIntegration = true;
+  };
+
   home.packages                = with pkgs; [
     wineWowPackages.stable
     nerd-fonts.iosevka
