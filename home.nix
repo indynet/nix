@@ -1,20 +1,20 @@
 { pkgs, global, nixvim, ... }: let f = { enable = true; };
                                    i = x: (import x { inherit pkgs global; }) // f;
 in {
-  programs.home-manager.enable = true;
+  programs.home-manager.enable                 = true;
 
-  home.stateVersion            = "25.05";
+  home.stateVersion                            = "25.05";
 
-  home.homeDirectory           = "/home/" + global.name;
-  home.username                = global.name;
+  home.homeDirectory                           = "/home/" + global.name;
+  home.username                                = global.name;
 
-  home.pointerCursor           = i ./home/cursor.nix;
+  home.pointerCursor                           = i ./home/cursor.nix;
 
-  home.shell                   = {
+  home.shell                                   = {
     enableIonIntegration = true;
   };
 
-  home.packages                = with pkgs; [
+  home.packages                                = with pkgs; [
     wineWowPackages.stable
     nerd-fonts.iosevka
     _1password-gui
@@ -33,17 +33,17 @@ in {
     vlc
   ];
 
-  imports                      = [
+  imports                                      = [
     nixvim.homeModules.nixvim
   ];
 
-  wayland.windowManager        = {
+  wayland.windowManager                        = {
     hyprland = i ./wm/hyprland.nix;
   };
 
-  gtk                          = i ./home/gtk.nix;
+  gtk                                          = i ./home/gtk.nix;
 
-  services                     = {
+  services                                     = {
     hyprpolkitagent = i ./services/hyprpolkitagent.nix;
     mpd-discord-rpc = i ./services/mpd-discord-rpc.nix;
     hyprlauncher    = i ./services/hyprlauncher.nix;
@@ -55,7 +55,7 @@ in {
     mpd             = i ./services/mpd.nix;
   };
 
-  programs                     = {
+  programs                                     = {
     quickshell = i ./programs/quickshell.nix;
     chromium   = i ./programs/chromium.nix;
     starship   = i ./programs/starship.nix;
@@ -72,7 +72,23 @@ in {
     git        = i ./programs/git.nix;
   };
 
-  home.file."side-update.sh"   = {
+  home.file.".config/hypr/hyprtoolkit.conf"    = {
+    enable = true;
+
+    text   = ''
+    font_family_monospace = Iosevka
+    accent_secondary      = 0xFF98EAD4
+    small_font_size       = 15
+    rounding_large        = 0
+    rounding_small        = 0
+    font_family           = Iosevka
+    background            = 0xFF000000
+    font_size             = 20
+    accent                = 0xFF655162
+    '';
+  };
+
+  home.file."side-update.sh"                   = {
     enable     = true;
     executable = true;
 
@@ -83,7 +99,7 @@ in {
     '';
   };
 
-  home.file."full-update.sh"   = {
+  home.file."full-update.sh"                   = {
     enable     = true;
 
     executable = true;
@@ -95,7 +111,7 @@ in {
     '';
   };
 
-  xdg.configFile."shell"       = {
+  xdg.configFile."shell"                       = {
     source = pkgs.lib.getExe pkgs.ion;
   };
 }
