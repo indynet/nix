@@ -214,6 +214,7 @@
         (sequence "FEED"                "|" "DONE")
         (sequence "TODO"                "|" "DONE")
         (sequence "TASK" "IN-PROGRESS"  "|" "DONE")
+        (sequence "BUY"                 "|" "DONE")
         (sequence "PLAN"                "|" "DONE" "CANCELLED")
         (sequence "APPOINTMENT" "VISIT" "|" "DONE" "CANCELLED")))
 
@@ -247,6 +248,10 @@
                       :weight bold
                       :underline nil))
         ("DONE" .
+         (:foreground "spring green"
+                      :weight bold
+                      :underline nil))
+        ("BUY" .
          (:foreground "spring green"
                       :weight bold
                       :underline nil))
