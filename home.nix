@@ -71,7 +71,7 @@ in {
     git        = i ./programs/git.nix;
   };
 
-  home.file."side-update.sh" = {
+  home.file."side-update.sh"   = {
     enable     = true;
     executable = true;
 
@@ -82,7 +82,7 @@ in {
     '';
   };
 
-  home.file."full-update.sh" = {
+  home.file."full-update.sh"   = {
     enable     = true;
 
     executable = true;
@@ -92,5 +92,9 @@ in {
     nix flake update --flake /etc/nixos
     nixos-rebuild switch
     '';
+  };
+
+  xdg.configFile."shell"       = {
+    source = pkgs.lib.getExe pkgs.ion;
   };
 }
