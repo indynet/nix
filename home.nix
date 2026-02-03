@@ -21,8 +21,10 @@ in {
     _1password-cli
     prismlauncher
     hyprpwcenter
+    yabridgectl
     winetricks
     alsa-utils
+    yabridge
     iosevka
     ripgrep
     spotify
