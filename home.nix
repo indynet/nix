@@ -15,7 +15,6 @@ in {
   };
 
   home.packages                                = with pkgs; [
-    wineWowPackages.yabridge
     wineWowPackages.staging
     nerd-fonts.iosevka
     _1password-gui
@@ -25,6 +24,7 @@ in {
     yabridgectl
     winetricks
     alsa-utils
+    yabridge
     iosevka
     ripgrep
     spotify
