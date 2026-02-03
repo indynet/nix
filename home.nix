@@ -15,12 +15,14 @@ in {
   };
 
   home.packages                                = with pkgs; [
-    wineWowPackages.stable
+    wineWowPackages.yabridge
+    wineWowPackages.staging
     nerd-fonts.iosevka
     _1password-gui
     _1password-cli
     prismlauncher
     hyprpwcenter
+    yabridgectl
     winetricks
     alsa-utils
     iosevka
