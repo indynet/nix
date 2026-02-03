@@ -18,6 +18,7 @@ with pkgs.lib;
     "$m"               = "SUPER";
 
     env                = [
+      "NIX_PROFILES=/etc/profiles/per-user/${global.name}"
       "GRIM_DEFAULT_DIR,/home/${global.name}/Pictures"
       "XCURSOR_SIZE,15"
     ];
