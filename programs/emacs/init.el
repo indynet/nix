@@ -264,6 +264,10 @@
                       :weight bold
                       :underline nil))))
 
+(org-bable-do-load-languages
+ 'org-babel-load-languages
+ '((ledger . t)))
+
 (require 'ido)
 
 (ido-everywhere 1)
