@@ -264,7 +264,7 @@
                       :weight bold
                       :underline nil))))
 
-(org-bable-do-load-languages
+(org-babel-do-load-languages
  'org-babel-load-languages
  '((ledger . t)))
 
