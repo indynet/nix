@@ -13,6 +13,7 @@ in {
     org-superstar
     haskell-mode
     org-contrib
+    ledger-mode
     inheritenv
     rust-mode
     org-recur
