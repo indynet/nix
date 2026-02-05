@@ -12,6 +12,7 @@ in {
     org-super-agenda
     org-superstar
     haskell-mode
+    org-contrib
     inheritenv
     rust-mode
     org-recur
