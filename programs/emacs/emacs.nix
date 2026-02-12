@@ -26,6 +26,7 @@ in {
     org-roam
     zig-mode
     emacsql
+    ement
     envrc
     magit
     dash
