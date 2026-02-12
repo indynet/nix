@@ -152,6 +152,8 @@
 (add-hook 'haskell-mode-hook
           'interactive-haskell-mode)
 
+(setq ement-save-sessions t)
+
 (with-eval-after-load 'tramp
   (add-to-list 'tramp-remote-path 'tramp-own-remote-path))
 

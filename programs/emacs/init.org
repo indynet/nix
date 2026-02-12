@@ -196,6 +196,10 @@
   (add-hook 'haskell-mode-hook
             'interactive-haskell-mode)
 #+end_src
+** ement
+#+begin_src elisp :tangle yes
+(setq ement-save-sessions t)
+#+end_src
 ** tramp
 #+begin_src elisp :tangle yes
   (with-eval-after-load 'tramp
