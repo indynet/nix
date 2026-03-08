@@ -234,6 +234,10 @@
          (:foreground "coral"
                       :weight bold
                       :underline nil))
+        ("TAKE" .
+         (:foreground "cyan"
+                      :weight bold
+                      :underline nil))
         ("VISIT" .
          (:foreground "deep sky blue"
                       :weight bold
