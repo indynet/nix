@@ -217,6 +217,7 @@
         (sequence "TODO"                "|" "DONE")
         (sequence "TASK" "IN-PROGRESS"  "|" "DONE")
         (sequence "BUY"                 "|" "DONE")
+        (sequence "TAKE"                "|" "TAKEN" "SKIPPED" "MISSED")
         (sequence "PLAN"                "|" "DONE" "CANCELLED")
         (sequence "APPOINTMENT" "VISIT" "|" "DONE" "CANCELLED")))
 
