@@ -235,7 +235,7 @@
                       :weight bold
                       :underline nil))
         ("TAKE" .
-         (:foreground "cyan"
+         (:foreground "light sea green"
                       :weight bold
                       :underline nil))
         ("VISIT" .
