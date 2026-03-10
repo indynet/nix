@@ -63,8 +63,6 @@ with pkgs.lib;
 
       gaps_out              = 8;
       gaps_in               = 8;
-
-      layout                = "master";
     };
 
     misc               = {
