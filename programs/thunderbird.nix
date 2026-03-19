@@ -1,5 +1,7 @@
 { ... }:
 
 {
-
+  profiles."primlove" = {
+    isDefault = true;
+  };
 }
