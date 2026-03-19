@@ -56,21 +56,22 @@ in {
   };
 
   programs                                     = {
-    quickshell = i ./programs/quickshell.nix;
-    chromium   = i ./programs/chromium.nix;
-    starship   = i ./programs/starship.nix;
-    hyprlock   = i ./programs/hyprlock.nix;
-    wezterm    = i ./programs/wezterm/wezterm.nix;
-    vesktop    = i ./programs/vesktop.nix;
-    nushell    = i ./programs/nushell.nix;
-    direnv     = i ./programs/direnv.nix;
-    nixvim     = i ./programs/nixvim/nixvim.nix;
-    lutris     = i ./programs/lutris.nix;
-    ledger     = i ./programs/ledger.nix;
-    emacs      = i ./programs/emacs/emacs.nix;
-    eza        = i ./programs/eza.nix;
-    ssh        = i ./programs/ssh.nix;
-    git        = i ./programs/git.nix;
+    thunderbird = i ./programs/thunderbird.nix;
+    quickshell  = i ./programs/quickshell.nix;
+    chromium    = i ./programs/chromium.nix;
+    starship    = i ./programs/starship.nix;
+    hyprlock    = i ./programs/hyprlock.nix;
+    wezterm     = i ./programs/wezterm/wezterm.nix;
+    vesktop     = i ./programs/vesktop.nix;
+    nushell     = i ./programs/nushell.nix;
+    direnv      = i ./programs/direnv.nix;
+    nixvim      = i ./programs/nixvim/nixvim.nix;
+    lutris      = i ./programs/lutris.nix;
+    ledger      = i ./programs/ledger.nix;
+    emacs       = i ./programs/emacs/emacs.nix;
+    eza         = i ./programs/eza.nix;
+    ssh         = i ./programs/ssh.nix;
+    git         = i ./programs/git.nix;
   };
 
   home.file.".config/hypr/hyprtoolkit.conf"    = {
